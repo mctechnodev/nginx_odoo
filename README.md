@@ -7,14 +7,14 @@ _Configuracion del archivo default.conf para Reverse Proxy de Odoo_
 ```
 sudo yum install epel-release
 sudo yum install nginx
-cd /etc/nginx
+cd /etc/nginx/conf.d/
 git clone https://github.com/mamfredym/nginx_odoo
 cd nginx_odoo/
-sudo cp /etc/nginx/nginx_odoo/default.conf /etc/nginx/default.conf
+sudo cp /etc/nginx/conf.d/nginx_odoo/default.conf /etc/nginx/conf.d/default.conf
 cd ..
 mv default default-temp
 mv default.conf default
-service ngnix restart
+sudo service ngnix restart
 ```
 
 
